@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalogue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GoTravel!</h1>
+        <p>Find your best place for holiday</p>
+    </header>
+
+    <section class="catalogue">
+        <div class="product">
+            <img src="images/Japan.jpeg" alt="Japan">
+            <h2>Japan</h2>
+            <p>All about Japan</p>
+            <button class="book-btn" data-product="japan">Book</button>
+            <a href="product1.html" class="more-btn">More</a>
+        </div>
+
+        <div class="product">
+            <img src="images/Korea.jpeg" alt="Korea">
+            <h2>Korea</h2>
+            <p>All about Korea</p>
+            <button class="book-btn" data-product="korea">Book</button>
+            <a href="product2.html" class="more-btn">More</a>
+        </div>
+
+        <div class="product">
+            <img src="images/Russia.jpeg" alt="Russia">
+            <h2>Russia</h2>
+            <p>All about Russia</p>
+            <button class="book-btn" data-product="russia">Book</button>
+            <a href="product3.html" class="more-btn">More</a>
+        </div>
+    </section>
+
+    <!-- Discount Offer Modal -->
+    <div id="discountModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn discount-close" style="color: red;">&times;</span>
+            <h2>Special Discount Offer!</h2>
+            <p>Get 20% off on all products for a limited time. Use code: SAVE20 at checkout :)</p>
+        </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn product-close" style="color: red;">&times;</span>
+            <h2 id="modalTitle">Product Details</h2>
+            <img id="modalImage" src="" alt="Product Image" style="width: 100%; cursor: pointer;">
+            <p id="modalDescription">Product description here...</p>
+
+            <!-- Section for displaying destinations inside the Product Details Modal -->
+        <div id="destinationList" class="destination-list" style="display: block;">
+            <h3>Choose Your Trip</h3>
+            ></div>
+</div>
+
+    </div>
+    <!-- Destination Detail Modal -->
+    <div id="destinationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn destination-close" style="color: red;">&times;</span>
+            <h2 id="destinationTitle">Destination Name</h2>
+            <img id="destinationImage" src="" alt="Destination Image" style="width: 100%;">
+            <p id="destinationDescription">Description about the destination...</p>
+            <button id="bookDestinationBtn">Book this Destination</button>
+        </div>
+    </div>
+
+    <!-- Cart Icon in the top right corner -->
+    <div id="cartIcon" style="position: fixed; top: 20px; right: 20px; cursor: pointer;">
+        <img src="images/Cart.png" alt="Cart" style="width: 40px; height: 40px;">
+        <span id="cartCount" style="
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: rgb(235, 74, 10);
+            color: #09f7cf;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-size: 12px;
+            display: none;">0</span>
+    </div>
+
+    <!-- Cart Details Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn cart-close" style="color: red;">&times;</span>
+            <h3>Your Booked Destinations</h3>
+            <div id="cartDetails"></div>
+            <button id="payButton" style="margin-top: 20px; display: none;">Pay</button>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn payment-close" style="color: red;">&times;</span>
+            <h3>Payment Information</h3>
+            <p>Please transfer the total amount to the following account number:</p>
+            <p><strong>Bank Account Number:</strong> 1234567890</p>
+            <p>Or scan the QR code below to pay via QRIS:</p>
+            <img src="images/qr.jpg" alt="QR Code for Payment" style="width: 200px; height: 200px;">
+            <p>Send your payment receipt to <b>gotravel@email.com</b></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
